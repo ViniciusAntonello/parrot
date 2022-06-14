@@ -10,20 +10,25 @@ body {
 #main-container {
     background-color: #FFF;
     width: 25%;
-    padding: 5%;;
+    padding: 2%;
     align-items: center;
+    margin-top: 3%;
 }
 
-#main-container form h1 {
-    font-family: 'Questrial', sans-serif;
-    font-size: 24px;
-    margin-bottom: 5%;
+@media screen and (max-width: 900px) {
+
+    #main-container {
+        width: 80%;
+        padding: 5%;
+        margin-top: 10%;
+    }
 }
 
-.input-cadastro {
-    margin-top: 5%;
-    text-align: center;
-    width: 300px;
-    border: 1px solid #909090;
-    border-radius: 8px;
+@media screen and (max-width: 480px) {
+    
+    #main-container {
+        width: 90%;
+        padding: 8%;
+        margin-top: 6%;
+    }
 }
