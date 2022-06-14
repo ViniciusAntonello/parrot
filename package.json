@@ -6,9 +6,13 @@
     "sequelize-cli": "^6.4.1"
   },
   "dependencies": {
+    "bootstrap": "^5.2.0-beta1",
     "cors": "^2.8.5",
     "dotenv": "^16.0.1",
-    "express": "^4.18.1"
+    "express": "^4.18.1",
+    "react-bootstrap": "^2.4.0",
+    "react-router-dom": "^6.3.0",
+    "yarn": "^1.22.19"
   },
   "name": "parrot",
   "version": "1.0.0",
