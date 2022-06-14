@@ -4,13 +4,13 @@
     width: 100px;
 }
 
-#main-container form h1 {
+#main-container-login form h1 {
     font-family: 'Questrial', sans-serif;
     font-size: 15px;
     margin-bottom: 10%;
 }
 
-.input-cadastro {
+.input-login {
     margin-top: 5%;
     text-align: center;
     width: 200px;
@@ -21,13 +21,13 @@
     padding: 0 !important;
 }
 
-.botao-cadastrar {
+.botao-login {
     display: flex;
     margin-top: 10%;
     justify-content: center;
 }
 
-.botao-cadastrar Button {
+.botao-login Button {
     width: 200px;
     border-radius: 8px;
     border: none;
@@ -40,11 +40,11 @@
     outline:none;
 }
 
-.botao-cadastrar Button:hover {
+.botao-login Button:hover {
     background-color: #512DA8;
 }
 
-.botao-cadastrar Button:focus {
+.botao-login Button:focus {
     background-color: #512DA8;
     box-shadow: none !important;
 }
@@ -53,25 +53,42 @@
     --bs-btn-hover-bg: #512DA8;
 }
 
+.btn-cadastrar {
+    font-family:  'Questrial', sans-serif;
+    font-size: 10px;
+    background-color: #FFF;
+    color: #555555;
+    text-decoration: none;
+}
+
+.btn-cadastrar:hover {
+    color: #000;
+}
+
 @media screen and (max-width: 900px) {
 
     .parrot-logo {
         width: 300px;
     }
 
-    #main-container form h1 {
+    #main-container-login form h1 {
         font-size: 30px;
         margin-bottom: 10%;
     }
 
-    .input-cadastro {
+    .input-login {
         width: 400px;
         font-size: 30px !important;
     }
 
-    .botao-cadastrar Button {
+    .botao-login Button {
         width: 400px;
         font-size: 30px;
+        margin-bottom: 5%;
+    }
+
+    .btn-cadastrar {
+        font-size: 20px;
     }
 }
 
@@ -81,17 +98,21 @@
         width: 150px;
     }
 
-    #main-container form h1 {
+    #main-container-login form h1 {
         font-size: 20px;
         margin-bottom: 10%;
     }
 
-    .input-cadastro {
+    .input-login {
         font-size: 20px !important;
     }
 
-    .botao-cadastrar Button {
+    .botao-login Button {
         width: 270px;
         font-size: 20px;
+    }
+
+    .btn-cadastrar {
+        font-size: 15px;
     }
 }
