@@ -1,0 +1,27 @@
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+#main-container-login {
+    background-color: #FFF;
+    width: 25%;
+    padding: 2%;
+    align-items: center;
+    margin-top: 10% !important;
+}
+
+@media screen and (max-width: 900px) {
+
+    #main-container-login {
+        width: 80%;
+        padding: 5%;
+        margin-top: 30% !important;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    
+    #main-container-login {
+        width: 90%;
+        padding: 8%;
+        margin-top: 30% !important;
+    }
+}

@@ -12,7 +12,7 @@ body {
     width: 25%;
     padding: 2%;
     align-items: center;
-    margin-top: 3%;
+    margin-top: 3% !important;
 }
 
 @media screen and (max-width: 900px) {
@@ -20,7 +20,7 @@ body {
     #main-container {
         width: 80%;
         padding: 5%;
-        margin-top: 10%;
+        margin-top: 5% !important;
     }
 }
 
@@ -29,6 +29,6 @@ body {
     #main-container {
         width: 90%;
         padding: 8%;
-        margin-top: 6%;
+        margin-top: 6% !important;
     }
 }

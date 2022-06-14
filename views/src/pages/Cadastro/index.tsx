@@ -4,7 +4,7 @@ import './styles.css';
 
 const Cadastro: React.FC = () => {
   return (
-      <Container id='main-container' className='container-md d-flex justify-content-center'>
+      <Container id='main-container' className='container d-flex justify-content-center'>
           <FormCadastro />
       </Container>
   );
