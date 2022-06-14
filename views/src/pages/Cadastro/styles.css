@@ -1,3 +1,5 @@
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
 body {
     margin: 0;
     padding: 0;
@@ -5,11 +7,23 @@ body {
     height: 100%;
 }
 
-main {
-    background-color: #FFFFFF;
-    display: flex;
-    flex-direction: column;
+#main-container {
+    background-color: #FFF;
+    width: 25%;
+    padding: 5%;;
     align-items: center;
-    padding: 5%;
-    width: 30%;
+}
+
+#main-container form h1 {
+    font-family: 'Questrial', sans-serif;
+    font-size: 24px;
+    margin-bottom: 5%;
+}
+
+.input-cadastro {
+    margin-top: 5%;
+    text-align: center;
+    width: 300px;
+    border: 1px solid #909090;
+    border-radius: 8px;
 }
