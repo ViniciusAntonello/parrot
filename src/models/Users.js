@@ -7,12 +7,16 @@ class Users extends Model {
         email: DataTypes.STRING,
         apartment: DataTypes.INTEGER,
         password: DataTypes.STRING,
-        createdAt: new Date(),
-        updatedAt: new Date()
+        createdAt: DataTypes.DATE,
+        updatedAt: DataTypes.DATE
       },
       { 
         sequelize
        })
+    }
+
+    static associate(models){
+      this.hasMany(models.Posts, { foreignKey: 'user_id', as: 'publications' });
     }
   }
 

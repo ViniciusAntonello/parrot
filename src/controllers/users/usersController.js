@@ -1,4 +1,5 @@
 const Users = require("../../models/Users");
+const bcrypt = require("bcryptjs");
 
 module.exports = {
   async listUsers(req, res) {
@@ -13,6 +14,7 @@ module.exports = {
   async createUser(req, res) {
     try {
       const { name, email, apartment, password } = req.body;
+      const newPassword = bcrypt.hashSync(password, 10)
 
       const userExist = await Users.count({
         where: { email },
@@ -26,7 +28,7 @@ module.exports = {
         name,
         email,
         apartment,
-        password,
+        password: newPassword,
       });
 
       res.status(201).json(`Usuário cadastrado com sucesso!`);
