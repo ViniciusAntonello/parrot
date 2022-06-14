@@ -11,8 +11,8 @@ routes.delete("/delete/:id", usersController.deleteUser);
 
 routes.get("/posts", postsController.listPosts);
 routes.post("/post", postsController.createPost);
-routes.put("/posts/:id", postsController.updatePost);
-routes.delete("/posts/:id", postsController.deletePost);
+routes.put("/edit/:id", postsController.updatePost);
+routes.delete("/remove/:id", postsController.deletePost);
 
 
 module.exports = routes;
