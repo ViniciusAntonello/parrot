@@ -8,7 +8,7 @@ for(let i = 0; i < 10; i++){
     {
       name: faker.name.findName(),
       email: faker.internet.email(),
-      apartment: faker.datatype.number({
+      apartment: faker.datatype.number({  
         'min': 1,
         'max': 299
       }),
