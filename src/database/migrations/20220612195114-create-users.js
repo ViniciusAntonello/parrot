@@ -23,6 +23,10 @@ module.exports = {
         type: Sequelize.STRING(120),
         allowNull: false,
       },
+      admin: {
+        type: Sequelize.INTEGER,
+        defaultValue: 0
+      },
       createdAt: {
         allowNull: true,
         type: Sequelize.DATE
