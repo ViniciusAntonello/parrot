@@ -2,7 +2,17 @@
 
 const { faker } = require('@faker-js/faker');
 
-let seed = [];
+let seed = [
+  {
+    name: 'Vinny Boy',
+    email: 'vinny.admin@email.com',
+    apartment: 42,
+    password: 'vinnyadmin',
+    admin: 1,
+    createdAt: new Date(),
+    updatedAt: new Date()
+  }
+];
 for(let i = 0; i < 10; i++){
   seed.push(
     {
@@ -13,6 +23,7 @@ for(let i = 0; i < 10; i++){
         'max': 299
       }),
       password: faker.internet.password(7),
+      admin: 0,
       createdAt: new Date(),
       updatedAt: new Date()
     }
