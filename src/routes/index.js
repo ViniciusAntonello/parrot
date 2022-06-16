@@ -1,14 +1,14 @@
 const express = require("express");
 
 // Controllers
-const postsController = require("../controllers/post/postController");
-const usersController = require("../controllers/users/usersController");
-const authController = require("../controllers/auth/authController");
+const postsController = require("../domain/posts/controllers/postController");
+const usersController = require("../domain/users/controllers/usersController");
+const authController = require("../domain/auth/controllers/authController");
 
 // Validação de dados nas requisições
-const userCreateValidate = require("../validations/users/create");
-const postCreateValidate = require("../validations/posts/create");
-const loginValidate = require("../validations/auth/login");
+const userCreateValidate = require("../infrastructure/database/validations/users/create");
+const postCreateValidate = require("../infrastructure/database/validations/posts/create");
+const loginValidate = require("../infrastructure/database/validations/auth/login");
 
 // Autenticação de dados
 const auth = require("../middlewares/auth");

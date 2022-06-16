@@ -1,4 +1,5 @@
-const Users = require("../../models/Users");
+const { Users } = require("../../../infrastructure/database/models");
+
 const bcrypt = require("bcryptjs");
 
 module.exports = {
