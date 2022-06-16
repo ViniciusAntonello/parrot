@@ -18,7 +18,7 @@
     border-radius: 8px !important;
     font-family: 'Questrial', sans-serif;
     font-size: 15px !important;
-    padding: 0 !important;
+    padding: 1% 0 !important;
 }
 
 .botao-login {
@@ -27,7 +27,7 @@
     justify-content: center;
 }
 
-.botao-login Button {
+.botao-login button {
     width: 200px;
     border-radius: 8px;
     border: none;
@@ -40,11 +40,11 @@
     outline:none;
 }
 
-.botao-login Button:hover {
+.botao-login button:hover {
     background-color: #512DA8;
 }
 
-.botao-login Button:focus {
+.botao-login button:focus {
     background-color: #512DA8;
     box-shadow: none !important;
 }

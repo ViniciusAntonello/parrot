@@ -17,8 +17,8 @@
     border: 1px solid #909090;
     border-radius: 8px !important;
     font-family: 'Questrial', sans-serif;
-    font-size: 15px !important;
-    padding: 0 !important;
+    font-size: 15px;
+    padding: 1% 0 !important;
 }
 
 .botao-cadastrar {
@@ -27,7 +27,7 @@
     justify-content: center;
 }
 
-.botao-cadastrar Button {
+.botao-cadastrar button {
     width: 200px;
     border-radius: 8px;
     border: none;
@@ -40,17 +40,18 @@
     outline:none;
 }
 
-.botao-cadastrar Button:hover {
+.botao-cadastrar button:hover {
     background-color: #512DA8;
 }
 
-.botao-cadastrar Button:focus {
+.botao-cadastrar button:focus {
     background-color: #512DA8;
     box-shadow: none !important;
 }
 
-.btn-primary {
-    --bs-btn-hover-bg: #512DA8;
+.btn-entrar {
+    text-decoration: none;
+    color: #FFF;
 }
 
 @media screen and (max-width: 900px) {
