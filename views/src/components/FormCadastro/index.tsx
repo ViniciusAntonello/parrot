@@ -1,7 +1,8 @@
-import Form from 'react-bootstrap/Form';
+import { Form, Alert } from 'react-bootstrap';
 import logo from '../../assets/logo.svg';
 import { cadastroUsuario } from '../../services/cadastro';
 import { useFormik } from 'formik';
+import * as Yup from 'yup';
 import './styles.css';
 
 interface Cadastro {
@@ -10,6 +11,13 @@ interface Cadastro {
     password: string,
     apartment: number
 }
+
+const validationSchema = Yup.object({
+    name: Yup.string().required("Nome é requerido"),
+    email: Yup.string().email("Email inválido").required("Email é requerido"),
+    password: Yup.string().min(6, "Quantidade mínima inválida").required("Senha é requerida"),
+    apartment: Yup.number().required("Unidade/apartamento é requerido").positive("O campo deve ser positivo").integer("O campo deve ser um número")
+})
 
 const FormCadastro: React.FC = () => {
 
@@ -21,6 +29,8 @@ const FormCadastro: React.FC = () => {
             apartment: "",
         },
 
+        validationSchema,
+
         onSubmit: async values => {
             const cadastro: Cadastro = {
                 name: values.name,
@@ -28,10 +38,9 @@ const FormCadastro: React.FC = () => {
                 password: values.password,
                 apartment: parseInt(values.apartment)
             }
-            console.log(cadastro)
 
             await cadastroUsuario(cadastro)
-            // alert(JSON.stringify(values, null, 2))
+            alert("Cadastro realizado com sucesso!")
         }
     })
     return (
@@ -77,7 +86,7 @@ const FormCadastro: React.FC = () => {
             <div>
                 <input
                     id='apartment'
-                    type='text'
+                    type='number'
                     placeholder='unidade/apartamento'
                     className='input-cadastro'
                     defaultValue={formik.values.apartment}
@@ -92,6 +101,26 @@ const FormCadastro: React.FC = () => {
             <div className='botao-cadastrar'>
                 <button type="submit" className="btn btn-primary">entrar</button>
             </div>
+            {formik.errors.name && (
+                <Alert style={{ marginTop: 20, padding: 5, fontFamily: 'Questrial' }} variant="danger">
+                    {formik.errors.name}
+                </Alert>)}
+            {formik.errors.email && (
+                <Alert style={{ marginTop: 10, padding: 5, fontFamily: 'Questrial' }} variant="danger">
+                    {formik.errors.email}
+                </Alert>)}
+            {formik.errors.password && (
+                <Alert style={{ marginTop: 10, padding: 5, fontFamily: 'Questrial' }} variant="danger">
+                    {formik.errors.password}
+                </Alert>)}
+            {formik.errors.password && (
+                <Alert style={{ marginTop: 10, padding: 5, fontFamily: 'Questrial' }} variant="danger">
+                    {formik.errors.password}
+                </Alert>)}
+            {formik.errors.apartment && (
+                <Alert style={{ marginTop: 10, padding: 5, fontFamily: 'Questrial' }} variant="danger">
+                    {formik.errors.apartment}
+                </Alert>)}
         </Form>
     )
 }

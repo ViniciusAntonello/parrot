@@ -2,10 +2,10 @@
 
 #main-container-login {
     background-color: #FFF;
-    width: 25%;
-    padding: 2%;
+    width: 30%;
+    padding: 3%;
     align-items: center;
-    margin-top: 10% !important;
+    margin-top: 7% !important;
 }
 
 @media screen and (max-width: 900px) {
@@ -13,7 +13,7 @@
     #main-container-login {
         width: 80%;
         padding: 5%;
-        margin-top: 30% !important;
+        margin-top: 20% !important;
     }
 }
 

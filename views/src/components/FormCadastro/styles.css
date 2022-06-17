@@ -1,24 +1,26 @@
 @import 'bootstrap/dist/css/bootstrap.min.css';
 
-.parrot-logo {
-    width: 100px;
-}
-
 #main-container form h1 {
     font-family: 'Questrial', sans-serif;
-    font-size: 15px;
+    font-size: 20px;
     margin-bottom: 10%;
 }
 
 .input-cadastro {
     margin-top: 5%;
     text-align: center;
-    width: 200px;
+    width: 300px;
     border: 1px solid #909090;
     border-radius: 8px !important;
     font-family: 'Questrial', sans-serif;
-    font-size: 15px;
+    font-size: 20px;
     padding: 1% 0 !important;
+}
+
+.error {
+    font-family: 'Questrial', sans-serif;
+    font-size: 15px;
+    color: red;
 }
 
 .botao-cadastrar {
@@ -28,14 +30,14 @@
 }
 
 .botao-cadastrar button {
-    width: 200px;
+    width: 300px;
     border-radius: 8px;
     border: none;
     background-color: #76BB4C;
     transition: 0.2s ease-in-out;
     color: #000;
     font-family: 'Questrial', sans-serif;
-    font-size: 15px;
+    font-size: 20px;
     padding: 2px;
     outline:none;
 }
@@ -89,6 +91,7 @@
 
     .input-cadastro {
         font-size: 20px !important;
+        width: 270px;
     }
 
     .botao-cadastrar Button {
