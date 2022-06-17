@@ -82,4 +82,4 @@ Algumas das tecnologias utilizadas nesse projeto foram:
 
 ### Front-end 
 - <img src="https://avatars.githubusercontent.com/u/86985496?s=64&v=4" width="28px"> [Sabrynna Lourenço](https://github.com/sabrynnall)
-- <img src="https://mpng.subpng.com/20180824/jtl/kisspng-computer-icons-logo-portable-network-graphics-clip-icons-for-free-iconza-circle-social-5b7fe46b0bac53.1999041115351082030478.jpg" width="28px"> [Diego Cancelas](https://github.com/diegocancellas)
+- <img src="https://avatars.githubusercontent.com/u/102478354?s=32&v=4" width="28px"> [Diego Cancelas](https://github.com/DiegoCancelas)
