@@ -1,7 +1,7 @@
 module.exports =
 {
     username: "root",
-    password: "password",
+    password: "/Maokai1991",
     database: "parrot",
     host: "127.0.0.1",
     dialect: "mysql",
