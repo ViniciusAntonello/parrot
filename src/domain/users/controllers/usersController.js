@@ -12,6 +12,17 @@ module.exports = {
     }
   },
 
+  async listUserId(req, res) {
+    try {
+      const users = await Users.findByPk(req.params.id,{
+        include: ["publications"]
+      });
+      res.status(201).json(users);
+    } catch (error) {
+      res.status(400).json(`Falha ao listar usuários: ${error}`);
+    }
+  },
+
   async createUser(req, res) {
     try {
       const { name, email, apartment, password } = req.body;
@@ -44,6 +55,7 @@ module.exports = {
     try {
       const { id } = req.params;
       const { name, email, apartment, password } = req.body;
+      const newPassword = bcrypt.hashSync(password, 10)
 
       const userExist = await Users.count({
         where: { id },
@@ -58,7 +70,7 @@ module.exports = {
           name,
           email,
           apartment,
-          password,
+          password: newPassword,
         },
         {
           where: { id },
