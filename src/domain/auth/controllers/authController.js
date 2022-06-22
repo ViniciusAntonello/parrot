@@ -9,17 +9,15 @@ const authController = {
     const { email, password } = req.body;
 
     const user = await Users.findOne({
-      where: {
-        email,
-      },
+      where: { email },
     });
 
     if(!user){
-        return res.status(400).json("Email ou senha inválido");
+        return res.status(400).json("Email ou senha inválidos");
     }
 
     if(!bcrypt.compareSync(password, user.password)){
-        return res.status(401).json("Email ou senha inválido");
+        return res.status(401).json("Email ou senha inválidos");
     }
 
     const token = jwt.sign({
@@ -29,8 +27,16 @@ const authController = {
         apartment: user.apartment
     },
     secret.key
-    )
-    return res.json(token)
+    );
+
+    let user_data = [token, {
+      id: user.id,
+      email: user.email,
+      name: user.name,
+      apartment: user.apartment
+    }];
+
+    return res.json(user_data)
   },
 };
 

@@ -20,6 +20,7 @@ routes.post("/login", loginValidate, authController.login);
 
 // Usuarios
 routes.get("/", auth, usersController.listUsers);
+routes.get("/user/:id", auth, usersController.listUserId);
 routes.post("/create", userCreateValidate, usersController.createUser);
 routes.put("/update/:id", auth, usersController.updateUser);
 routes.delete("/delete/:id", auth, usersController.deleteUser);
@@ -28,6 +29,6 @@ routes.delete("/delete/:id", auth, usersController.deleteUser);
 routes.get("/posts", auth, postsController.listPosts);
 routes.post("/post", postCreateValidate, auth, postsController.createPost);
 routes.put("/edit/:id", auth, postsController.updatePost);
-routes.delete("/remove/:id", auth, postsController.deletePost);
+routes.delete("/post/remove/:id", auth, postsController.deletePost);
 
 module.exports = routes;
